@@ -37,10 +37,10 @@ enhanced-mode-by-rule = true
 [Proxy Group]
 # > 策略组
 # >> 自动测速
-# ♻️ 自动选择 = url-test, policy-path = https://sub.store/download/Cloudflare?target=SurgeMac, update-interval = 86400, url = http://www.gstatic.com/generate_204, interval=300, tolerance=50
-♻️ 自动选择 = url-test, policy-path=https://sub.store/download/Cloudflare?target=SurgeMac, update-interval=86400
+# ♻️ 自动选择 = url-test, policy-path = 订阅地址, update-interval = 86400, url = http://www.gstatic.com/generate_204, interval=600, tolerance=100
+♻️ 自动选择 = url-test, policy-path=订阅地址, update-interval=86400
 # >> 手动选择
-🚀 手动切换 = select, policy-path=https://sub.store/download/Cloudflare?target=SurgeMac
+🚀 手动切换 = select, policy-path=订阅地址
 🚀 节点选择 = select, ♻️ 自动选择, 🚀 手动切换, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇯🇵 日韩节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇪🇺 欧洲节点, 🌍 非洲节点, 🇺🇳 小众节点, DIRECT
 # >> 分流策略
 📲 电报消息 = select, ♻️ 自动选择, 🚀 手动切换, 🚀 节点选择, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇯🇵 日韩节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇪🇺 欧洲节点, 🌍 非洲节点, 🇺🇳 小众节点
@@ -48,7 +48,7 @@ enhanced-mode-by-rule = true
 # >> 流媒体策略
 📹 油管视频 = select, ♻️ 自动选择, 🚀 手动切换, 🚀 节点选择, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇯🇵 日韩节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇪🇺 欧洲节点, 🌍 非洲节点, 🇺🇳 小众节点
 🎥 奈飞视频 = select, ♻️ 自动选择, 🚀 手动切换, 🚀 节点选择, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇯🇵 日韩节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇪🇺 欧洲节点, 🌍 非洲节点, 🇺🇳 小众节点
-📺 巴哈姆特 = select, 🇼🇸 台湾节点, 🚀 节点选择, 🚀 手动切换
+# 📺 巴哈姆特 = select, 🇼🇸 台湾节点, 🚀 节点选择, 🚀 手动切换
 📺 哔哩哔哩 = select, 🎯 全球直连, 🇼🇸 台湾节点, 🇭🇰 香港节点
 🎶 网易音乐 = select, DIRECT, 🚀 节点选择, ♻️ 自动选择
 🌍 国外媒体 = select, ♻️ 自动选择, 🚀 手动切换, 🚀 节点选择, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇯🇵 日韩节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇪🇺 欧洲节点, 🌍 非洲节点, 🇺🇳 小众节点
@@ -66,14 +66,14 @@ enhanced-mode-by-rule = true
 🐟 漏网之鱼 = select, ♻️ 自动选择, 🚀 手动切换, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇯🇵 日韩节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇪🇺 欧洲节点, 🌍 非洲节点, 🇺🇳 小众节点, DIRECT
 
 # > 地域分组
-🇭🇰 香港节点 = url-test, policy-path=https://sub.store/download/Cloudflare?target=SurgeMac, update-interval=86400, policy-regex-filter=(🇭🇰)|(港)|(Hong)|(HK)
-🇼🇸 台湾节点 = url-test, policy-path=https://sub.store/download/Cloudflare?target=SurgeMac, update-interval=86400, policy-regex-filter=(🇼🇸)|(台)|(Tai)|(TW)
-🇯🇵 日韩节点 = url-test, policy-path=https://sub.store/download/Cloudflare?target=SurgeMac, update-interval=86400, policy-regex-filter=(🇯🇵)|(日)|(Japan)|(JP)|(🇰🇷)|(韩)|(Korea)|(KR)
-🇸🇬 狮城节点 = url-test, policy-path=https://sub.store/download/Cloudflare?target=SurgeMac, update-interval=86400, policy-regex-filter=(🇸🇬)|(新)|(Singapore)|(SG)
-🇺🇲 美国节点 = url-test, policy-path=https://sub.store/download/Cloudflare?target=SurgeMac, update-interval=86400, policy-regex-filter=(🇺🇸)|(美)|(States)|(US)
-🇪🇺 欧洲节点 = url-test, policy-path=https://sub.store/download/Cloudflare?target=SurgeMac, update-interval=86400, policy-regex-filter=(🇬🇧)|(英)|(Kingdom)|(UK)|(🇩🇪)|(德)|(Germany)|(DE)|(🇳🇱)|(荷)|(Netherlands)|(NL)|(🇫🇮)|(芬)|(Finland)|(FI)|(🇫🇷)|(法)|(France)|(FR)|(🇵🇱)|(波)|(Poland)|(PL)|(🇨🇿)|(捷克)|(Czech)|(CZ)|(🇭🇺)|(匈牙利)|(Hungary)|(HU)|(🇷🇺)|(俄)|(Russia)|(RU)|(🇸🇪)|(瑞典)|(Sweden)|(SE)|(🇪🇪)|(爱沙尼亚)|(Estonia)|(EE)|(🇱🇻)|(拉脱维亚)|(Latvia)|(LV)
-🌍 非洲节点 = url-test, policy-path=https://sub.store/download/Cloudflare?target=SurgeMac, update-interval=86400, policy-regex-filter=(🇨🇲)|(喀麦隆)|(Cameroon)|(CM)|(🇨🇫)|(中非)|(Central African Republic)|(CF)
-🇺🇳 小众节点 = url-test, policy-path=https://sub.store/download/Cloudflare?target=SurgeMac, update-interval=86400, policy-regex-filter=(🇻🇳)|(越南)|(Vietnam)|(VN)|(🇲🇾)|(马来西亚)|(Malaysia)|(MY)
+🇭🇰 香港节点 = url-test, 订阅节点, update-interval=86400, policy-regex-filter=(🇭🇰)|(港)|(Hong)|(HK)
+🇼🇸 台湾节点 = url-test, 订阅节点, update-interval=86400, policy-regex-filter=(🇼🇸)|(台)|(Tai)|(TW)
+🇯🇵 日韩节点 = url-test, 订阅节点, update-interval=86400, policy-regex-filter=(🇯🇵)|(日)|(Japan)|(JP)|(🇰🇷)|(韩)|(Korea)|(KR)
+🇸🇬 狮城节点 = url-test, 订阅节点, update-interval=86400, policy-regex-filter=(🇸🇬)|(新)|(Singapore)|(SG)
+🇺🇲 美国节点 = url-test, 订阅节点, update-interval=86400, policy-regex-filter=(🇺🇸)|(美)|(States)|(US)
+🇪🇺 欧洲节点 = url-test, 订阅节点, update-interval=86400, policy-regex-filter=(🇬🇧)|(英)|(Kingdom)|(UK)|(🇩🇪)|(德)|(Germany)|(DE)|(🇳🇱)|(荷)|(Netherlands)|(NL)|(🇫🇮)|(芬)|(Finland)|(FI)|(🇫🇷)|(法)|(France)|(FR)|(🇵🇱)|(波)|(Poland)|(PL)|(🇨🇿)|(捷克)|(Czech)|(CZ)|(🇭🇺)|(匈牙利)|(Hungary)|(HU)|(🇷🇺)|(俄)|(Russia)|(RU)|(🇸🇪)|(瑞典)|(Sweden)|(SE)|(🇪🇪)|(爱沙尼亚)|(Estonia)|(EE)|(🇱🇻)|(拉脱维亚)|(Latvia)|(LV)
+🌍 非洲节点 = url-test, 订阅节点, update-interval=86400, policy-regex-filter=(🇨🇲)|(喀麦隆)|(Cameroon)|(CM)|(🇨🇫)|(中非)|(Central African Republic)|(CF)
+🇺🇳 小众节点 = url-test, 订阅节点, update-interval=86400, policy-regex-filter=(🇻🇳)|(越南)|(Vietnam)|(VN)|(🇲🇾)|(马来西亚)|(Malaysia)|(MY)
 # >> 多地域组合
 🗺️ Non-HK = url-test, 🇼🇸 台湾节点, 🇯🇵 日韩节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇪🇺 欧洲节点, 🌍 非洲节点, 🇺🇳 小众节点
 🌏 Asia = url-test, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇯🇵 日韩节点, 🇸🇬 狮城节点,🇺🇳 小众节点
